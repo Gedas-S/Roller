@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>Roll your stats insecurely!</title>
+</head>
+<body>
+    {% if rolls %}
+	<table id="roll_table">
+    <tr><td>{{rolls[0]}}</td></tr>
+    <tr><td>{{rolls[1]}}</td></tr>
+    <tr><td>{{rolls[2]}}</td></tr>
+    <tr><td>{{rolls[3]}}</td></tr>
+    <tr><td>{{rolls[4]}}</td></tr>
+    <tr><td>{{rolls[5]}}</td></tr>
+    </table>
+	{% endif %}
+    
+    <form action="/final_roll" method="post">
+	<table class="control"><tr>
+        <td><p>Name:</p></td>
+		<td><input type="text" class="text_field" name="name"></td>
+		<td><button class="button" id="final_roll">Roll (final)</button></td>
+	</tr></table>
+    </form>
+    <p></p>
+    <form action="/test_roll" method="get">
+    <table class="control"><tr>
+		<td><button class="button" id="test_roll">Roll (test)</button></td>
+	</tr></table>
+    </form>
+</body>
+</html>
